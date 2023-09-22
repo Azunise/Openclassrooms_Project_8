@@ -3,7 +3,9 @@
 function Banner(props) {
     return (
         <div style={{backgroundImage:`url(${props.cover})`}} className="banner">
-            <h2>{props.title}</h2>
+            <div class="banner__darken"></div>
+            <span class="banner__txt">{props.title}</span>
+            
         </div>
     )
 }
