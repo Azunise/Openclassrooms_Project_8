@@ -1,0 +1,17 @@
+.tagList {
+    list-style: none;
+    display: flex;
+    margin: 24px 0px 24px 0px;
+    padding: 0;
+    gap: 10px;
+
+    & li {
+        width: 115px;
+        height: 25px;
+        background-color: #FF6060;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

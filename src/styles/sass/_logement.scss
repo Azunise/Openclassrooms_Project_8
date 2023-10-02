@@ -86,3 +86,56 @@
 
     
 }
+
+
+.descriptionInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.ficheLogement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pfpHost {
+    
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.hostData {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fullStar {
+    color: #ff6060;
+}
+
+.emptyStar {
+    color: #e3e3e3;
+}
+
+.partdeux {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.collapseLogement {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+}
+
+.rate {
+    display: flex;
+    margin: 21px 0px 31px 0px;
+    gap: 14px;
+    justify-content: flex-end;
+}

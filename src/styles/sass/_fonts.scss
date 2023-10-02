@@ -11,6 +11,11 @@
     font-size: $size;
     line-height: 142.6%;
     
+    
+}
+
+p, h1, h2, h3 {
+    margin: 0;
 }
 
 .header__navlink {
@@ -63,7 +68,7 @@
     color: #FF6060;
 }
 
-.collapse h2 {
+.collapse__contained h2 {
     @include montserrat(24px, 500);
     margin: 0%;
 }
@@ -74,5 +79,16 @@
 
 .current__counter {
     @include montserrat(18px, 500);
+    color: white;
+}
+
+.hostData p {
+    @include montserrat(18px, 500);
+    color: #FF6060;
+    width: 93px;
+}
+
+.tagList li {
+    @include montserrat(14px, 500);
     color: white;
 }
