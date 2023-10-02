@@ -9,6 +9,10 @@ header .navbar {
   display: flex;
   gap: 50px;
 }
+header .logo {
+  width: 210px;
+  height: 68px;
+}
 
 footer {
   background-color: black;
@@ -116,6 +120,15 @@ main {
   line-height: 142.6%;
 }
 
+.current__counter {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: white;
+}
+
 body {
   margin: 0%;
 }
@@ -126,7 +139,6 @@ main {
 
 .banner {
   border-radius: 25px;
-  margin-bottom: 43px;
   height: 223px;
   width: 100%;
   position: relative;
@@ -156,6 +168,7 @@ article#gallery {
   background-color: #F6F6F6;
   padding: 50px 45px;
   gap: 40px;
+  justify-content: center;
 }
 
 .card {
@@ -194,8 +207,7 @@ article#gallery {
 .collapse {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin: 20px 0;
+  margin: 20px 100px;
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
@@ -226,11 +238,89 @@ article#gallery {
   background-color: #F6F6F6;
   color: #FF6060;
   position: relative;
-  bottom: 5px;
+  margin-top: -5px;
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  box-sizing: border-box;
   z-index: 2;
 }
 .collapse__dropdown p {
   margin: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  article#gallery {
+    flex-direction: column;
+    background-color: white;
+    padding: 0px;
+    gap: 20px;
+  }
+  .collapse {
+    width: 100%;
+    margin: 20px 0px;
+    gap: 20px;
+  }
+}
+.carrouse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 415px;
+  position: relative;
+}
+.carrouse .carrousel__container {
+  width: 100%;
+  height: 100%;
+}
+.carrouse .carrousel__container .banner {
+  width: 100%;
+  height: 100%;
+}
+.carrouse .carrousel__container .banner__darken {
+  opacity: 0;
+}
+.carrouse .carrousel__container .banner__active {
+  height: 100%;
+}
+.carrouse .carrousel__container .banner__passive {
+  height: 0%;
+}
+.carrouse .carrousel__container img {
+  width: 100%;
+}
+.carrouse .carrousel__container .leftArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 120px;
+  position: absolute;
+  top: calc(50% - 60px);
+  left: 0;
+  z-index: 3;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 5.5rem;
+}
+.carrouse .carrousel__container .rightArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 120px;
+  position: absolute;
+  top: calc(50% - 60px);
+  right: 0;
+  z-index: 3;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 5.5rem;
+}
+.carrouse .carrousel__container .current__counter {
+  position: absolute;
+  z-index: 3;
+  bottom: 25px;
+  left: 50%;
 }/*# sourceMappingURL=styles.css.map */

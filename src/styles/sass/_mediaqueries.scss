@@ -1,0 +1,23 @@
+$breakpoint : 700px;
+
+@media screen and (max-width: $breakpoint) {
+
+    
+article#gallery {
+    
+    flex-direction: column;
+    
+    
+    background-color: white;
+    padding: 0px;
+    gap: 20px;
+    
+}
+
+.collapse {
+    width: 100%;
+    margin:20px 0px;
+    gap: 20px;
+}
+
+}

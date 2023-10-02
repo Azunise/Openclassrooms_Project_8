@@ -19,7 +19,6 @@
     color: $orange-1;
     text-decoration: none;
 
-    
 
 }
 
@@ -70,5 +69,10 @@
 }
 
 .collapse__dropdown {
-    @include montserrat(12px, 400)
+    @include montserrat(12px, 400);
+}
+
+.current__counter {
+    @include montserrat(18px, 500);
+    color: white;
 }
