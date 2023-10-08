@@ -2,7 +2,7 @@ import pictureData from "../../data/logement.json";
 import Carrousel from "../../components/Carrousel";
 import Rate from "../../components/Rate";
 import Host from "../../components/Host";
-import { Routes, Route, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Collapse from "../../components/Collapse";
 import Tag from "../../components/Tag";
 
@@ -11,70 +11,75 @@ import Tag from "../../components/Tag";
 function Logement() {
 
 
-  const { id } = useParams();
+  const { currentId } = useParams();
+  
 
-  const currentPage = pictureData.find((element) => element.id === "c67ab8a7");
+  const currentPage = pictureData.find((element) => element.id === currentId);
 
-  console.log(currentPage.pictures.length)
+  
 
 
-  const breakedEquipments = currentPage.equipments.map((attribute, index) => {
-    const islast = currentPage.equipments.length === (index + 1);
-    return !islast ? <>{attribute}<br/></> : attribute;
-  })
+  const listEquipments = currentPage.equipments.map((element) => <li key={element}>{element}</li>) 
+    
 
 
   return (
     
     <main>
-      <div className="carrouse">
-        
-        
-      <Carrousel pictures={currentPage.pictures} />
-
-      </div>
-
-      <div className="partdeux">
-
+      <div className="containerHousing">
 
 
       
-
-        <section className="ficheLogement">
-              <div className="descriptionInfo">
-                <h2 className="titleLogement">{currentPage.title}</h2>
-                <p className="locationLogement">{currentPage.location}</p>
-                <Tag array={currentPage.tags} /> 
-              </div>
-
-              <div className="infoHost">
-                
-
-                  <Host
-                    name={currentPage.host.name}
-                    picture={currentPage.host.picture}
-                  />
-
-                
-                
-                  <Rate rating={currentPage.rating} />
-                
-              </div>
-
-              
-              
-        </section>
-        
-        <div className="collapseLogement">
-          <Collapse content={currentPage.description} title={"Description"} />
-
+        <div className="carrouse">
           
-          <Collapse content={breakedEquipments} title={"Équipements"} />
+          
+        <Carrousel pictures={currentPage.pictures} />
 
         </div>
-      </div>
 
-      
+        <div className="partdeux">
+
+
+
+        
+
+          <section className="cardLogement">
+                <div className="descriptionInfo">
+                  <h2 className="titleHousing">{currentPage.title}</h2>
+                  <p className="locationHousing">{currentPage.location}</p>
+                  <Tag array={currentPage.tags} /> 
+                </div>
+
+                <div className="infoHost">
+                  
+
+                    <Host
+                      name={currentPage.host.name}
+                      picture={currentPage.host.picture}
+                    />
+
+                  
+                  
+                    <Rate rating={currentPage.rating} />
+                  
+                </div>
+
+                
+                
+          </section>
+          
+          <div className="collapseLogement">
+            <Collapse title={"Description"}>{currentPage.description}</Collapse>
+
+            
+            <Collapse title={"Équipements"}>
+              <ul className="listEquipments">{listEquipments}</ul>
+            </Collapse>
+
+          </div>
+        </div>
+
+      </div>
     </main>
   )
 }

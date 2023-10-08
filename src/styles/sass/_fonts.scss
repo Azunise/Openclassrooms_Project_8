@@ -74,7 +74,7 @@ p, h1, h2, h3 {
 }
 
 .collapse__dropdown {
-    @include montserrat(12px, 400);
+    @include montserrat(18px, 400);
 }
 
 .current__counter {
@@ -91,4 +91,14 @@ p, h1, h2, h3 {
 .tagList li {
     @include montserrat(14px, 500);
     color: white;
+}
+
+.titleHousing {
+    @include montserrat(36px, 500);
+    color: #FF6060;
+}
+
+.locationHousing {
+    @include montserrat(18px, 500);
+    color: #FF6060;
 }

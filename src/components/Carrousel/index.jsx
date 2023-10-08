@@ -13,21 +13,26 @@ function Carrousel(props) {
     
 
     if (lengthArray === 0) {return null;}
-    else {console.log(current)
+    else {
         return (
 
         <div className='carrousel__container'>
+
+            {lengthArray !== 1 && 
             <p className="leftArrow" onClick={() => setCurrent((current+lengthArray-1)%lengthArray)}>
             <FontAwesomeIcon icon="chevron-left" />
-            </p>
+            </p>}
 
+            {lengthArray !== 1 && 
             <p className="rightArrow" onClick={() => setCurrent((current+1)%lengthArray)}>
             <FontAwesomeIcon icon="chevron-right" />
-            </p>
+            </p>}
 
+
+            {lengthArray !== 1 && 
             <div className="current__counter">
                 {current + 1}/{lengthArray}
-            </div>
+            </div>}
 
             
             {props.pictures.map((image, index) => {
@@ -38,7 +43,7 @@ function Carrousel(props) {
                 >
                     
                 
-                    {index === current && <Banner cover={image}  />}
+                    {index === current && <Banner cover={image} hasDarken={false}  />}
                    
                                       
                     

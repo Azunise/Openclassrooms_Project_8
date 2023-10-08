@@ -1,13 +1,18 @@
 footer {
-    
+    display: flex;
+    flex-direction: column;
     background-color: black;
     padding: 66px 20px 29px 20px;
-    text-align: center;
-    min-height: 100px;
+    align-items: center;
+    justify-content: space-between;
     
+    gap: 28px;
     margin: 0px;
     
-
+    & .logo {
+        width: 122px;
+        height: 40px;
+    }
 
 
 }

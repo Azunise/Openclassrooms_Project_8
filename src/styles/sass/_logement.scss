@@ -78,6 +78,8 @@
             z-index: 3;
             bottom: 25px;
             left: 50%;
+            pointer-events: none;
+            user-select: none;
     
         }
     }
@@ -93,7 +95,7 @@
     flex-direction: column;
 }
 
-.ficheLogement {
+.cardHousing {
     display: flex;
     justify-content: space-between;
 }
@@ -127,10 +129,11 @@
     margin-top: 30px;
 }
 
-.collapseLogement {
+.collapseHousing {
     display: flex;
     justify-content: space-between;
     gap: 76px;
+    padding-bottom: 5px;
 }
 
 .rate {
@@ -138,4 +141,20 @@
     margin: 21px 0px 31px 0px;
     gap: 14px;
     justify-content: flex-end;
+}
+
+.infoHost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listEquipments {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+.containerHousing {
+    margin: 50px 0px;
 }

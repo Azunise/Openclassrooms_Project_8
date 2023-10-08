@@ -26,7 +26,7 @@ function Collapse (props) {
     </div>
     
     <div className="collapse__dropdown" style={{maxHeight: isOpen ? 200 : 0 }}>
-      <p>{props.content}</p>
+      <div>{props.children}</div>
     </div>
   </div>
   
