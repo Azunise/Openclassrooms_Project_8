@@ -14,7 +14,6 @@ function Rate(props) {
     const possibles = [1, 2, 3, 4, 5];
 
    
-    
 
     return(
         <div className='rate'>

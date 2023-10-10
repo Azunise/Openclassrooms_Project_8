@@ -16,7 +16,6 @@ function Logement() {
   
 
   const currentPage = pictureData.find((element) => element.id === currentId);
-  console.log(currentPage)
   
   if (currentPage === undefined) {return(<Navigate replace to="/404" />)}
 
