@@ -2,7 +2,7 @@ import pictureData from "../../data/logement.json";
 import Carrousel from "../../components/Carrousel";
 import Rate from "../../components/Rate";
 import Host from "../../components/Host";
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Collapse from "../../components/Collapse";
 import Tag from "../../components/Tag";
 
@@ -12,18 +12,21 @@ function Logement() {
 
 
   const { currentId } = useParams();
+
   
 
   const currentPage = pictureData.find((element) => element.id === currentId);
-
+  console.log(currentPage)
   
-
+  if (currentPage === undefined) {return(<Navigate replace to="/404" />)}
 
   const listEquipments = currentPage.equipments.map((element) => <li key={element}>{element}</li>) 
     
-
+  
 
   return (
+    
+    
     
     <main>
       <div className="containerHousing">
@@ -43,7 +46,7 @@ function Logement() {
 
         
 
-          <section className="cardLogement">
+          <section className="cardHousing">
                 <div className="descriptionInfo">
                   <h2 className="titleHousing">{currentPage.title}</h2>
                   <p className="locationHousing">{currentPage.location}</p>
@@ -68,7 +71,7 @@ function Logement() {
                 
           </section>
           
-          <div className="collapseLogement">
+          <div className="collapseHousing">
             <Collapse title={"Description"}>{currentPage.description}</Collapse>
 
             
@@ -80,8 +83,9 @@ function Logement() {
         </div>
 
       </div>
-    </main>
-  )
+    </main> 
+    
+  ) 
 }
 
 export default Logement

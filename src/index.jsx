@@ -1,5 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import { createRoot } from 'react-dom/client';
+
 import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom';
 
 import Home from './pages/Home/';
@@ -13,22 +15,25 @@ import './styles/css/styles.css';
 
 
 
+const container = document.getElementById('root');
+const root = createRoot(container); 
 
-ReactDOM.render(
+
+root.render(
   <React.StrictMode>
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Logement" >
-          <Route path=":currentId" element={<Logement />} />
+          <Route path=":currentId" element={<Logement />} />        
         </Route>
         <Route path="/APropos" element={<APropos/>} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
+  
 )
 

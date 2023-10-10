@@ -1,13 +1,17 @@
-@import './general';
-@import './header';
-@import './footer'; 
-@import './fonts';
-@import './banner';
-@import './card';
-@import './error';
-@import './collapse';
-@import './logement';
-@import './tag';
-@import './about';
-@import './home';
+@import './base/general';
+@import './base/fonts';
+
+@import './layout/header';
+@import './layout/footer'; 
+
+@import './pages/home';
+@import './pages/about';
+@import './pages/logement';
+@import './pages/error';
+
+@import './components/banner';
+@import './components/card';
+@import './components/collapse';
+@import './components/tag';
+
 @import './mediaqueries';
