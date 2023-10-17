@@ -585,6 +585,7 @@ article#gallery {
   }
   .collapseHousing {
     flex-direction: column;
+    gap: 20px;
   }
   .fullStar, .emptyStar {
     height: 50%;
