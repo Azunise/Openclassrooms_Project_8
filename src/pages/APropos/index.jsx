@@ -13,6 +13,7 @@ function APropos() {
           <div className="collapse">
             
               {collapseData.map((item) => {
+                
                 return (
                   <div className="collapse__container" key={item.id}>
                     <Collapse title={item.title}>{item.content}</Collapse>

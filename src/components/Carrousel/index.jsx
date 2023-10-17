@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import arrowPrevious from "../../assets/arrow-previous.png"
+import arrowNext from "../../assets/arrow-next.png"
 import Banner from "../Banner";
 
-library.add(faChevronLeft, faChevronRight);
+
 
 function Carrousel(props) {
     const [current, setCurrent] = useState(0);
@@ -20,12 +19,12 @@ function Carrousel(props) {
 
             {lengthArray !== 1 && 
             <p className="leftArrow" onClick={() => setCurrent((current+lengthArray-1)%lengthArray)}>
-            <FontAwesomeIcon icon="chevron-left" />
+            <img src={arrowPrevious} alt='an arrow, pointing left'/>
             </p>}
 
             {lengthArray !== 1 && 
             <p className="rightArrow" onClick={() => setCurrent((current+1)%lengthArray)}>
-            <FontAwesomeIcon icon="chevron-right" />
+            <img src={arrowNext} alt='an arrow, pointing right'/>
             </p>}
 
 

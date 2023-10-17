@@ -1,4 +1,4 @@
-.carrouse {
+.carrousel {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -35,7 +35,7 @@
         
     
         & img{
-            width: 100%;
+            width: 50%;
             
         }
     
@@ -113,17 +113,23 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: flex-end;
 }
 
-.fullStar {
-    color: #ff6060;
+// .fullStar {
+//     color: #ff6060;
+// }
+
+// .emptyStar {
+//     color: #e3e3e3;
+// }
+
+.fullStar, .emptyStar {
+        
+    height: 66%;
 }
 
-.emptyStar {
-    color: #e3e3e3;
-}
-
-.partdeux {
+.housingInfo {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
@@ -139,7 +145,7 @@
 .rate {
     display: flex;
     margin: 21px 0px 31px 0px;
-    gap: 14px;
+    gap: 10px;
     justify-content: flex-end;
 }
 

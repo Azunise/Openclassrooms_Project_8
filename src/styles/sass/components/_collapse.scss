@@ -28,7 +28,15 @@
         position: relative;
         z-index: 3;
         
-        
+        & div {
+            width: 32px;
+            aspect-ratio: 1/1;
+
+            & img {
+                width: 100%;
+            }
+        }
+
         
     }
   
@@ -65,6 +73,7 @@
 
         
         overflow: hidden;
+        overflow-y: auto;
         box-sizing: border-box;
         
         z-index: 2;
@@ -75,6 +84,8 @@
         }
         
     }
+
+    
 
     
     

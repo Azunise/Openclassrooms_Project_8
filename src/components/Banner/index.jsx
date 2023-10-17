@@ -1,4 +1,4 @@
-//import background from "../../assets/Background.jpg"
+
 
 function Banner(props) {
     return (

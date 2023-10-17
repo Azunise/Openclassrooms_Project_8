@@ -32,17 +32,14 @@ function Logement() {
 
 
       
-        <div className="carrouse">
+        <div className="carrousel">
           
           
         <Carrousel pictures={currentPage.pictures} />
 
         </div>
 
-        <div className="partdeux">
-
-
-
+        <div className="housingInfo">
         
 
           <section className="cardHousing">

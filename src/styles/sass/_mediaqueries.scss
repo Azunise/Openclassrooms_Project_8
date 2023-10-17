@@ -13,6 +13,7 @@ $breakpoint-home-banner : 1040px;
     .banner__txt{
         max-width: 600px;
         margin-left: 40px;
+        font-size: 36px;
     }
     
 }
@@ -37,6 +38,8 @@ $breakpoint-home-banner : 1040px;
         margin: 0px;
         gap: 20px;
         padding: 19px 0px 5px 0px;
+
+
     }
 
     footer {
@@ -126,11 +129,15 @@ $breakpoint-home-banner : 1040px;
     }
 
     header {
-        margin: 20px;
+        padding: 20px;
     }
 
-    .carrouse .carrousel__container .leftArrow, .carrouse .carrousel__container .rightArrow {
+    .carrousel .carrousel__container .leftArrow, .carrousel .carrousel__container .rightArrow {
         font-size: 1.5rem;
+    }
+
+    .carrousel .carrousel__container img {
+        width: 25%;
     }
 
     
@@ -143,4 +150,26 @@ $breakpoint-home-banner : 1040px;
         margin: 19px 0px;
     }
 
+    .collapseHousing {
+        flex-direction: column;
+    }
+
+    .fullStar, .emptyStar {
+        
+        height: 50%;
+    }
+
+    .rate {
+        gap: 2px;
+        justify-content: start;
+    }
+
+
+    .collapse__title div {
+        width: 20px;
+    }
+
+    .current__counter {
+        display: none;
+    }
 }

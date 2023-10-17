@@ -1,20 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0%;
+  max-width: 1450px;
+  margin: auto;
+  min-width: 400px;
 }
 
 main {
   padding: 0px 100px;
-  min-width: 400px;
 }
 
 body {
   margin: 0%;
+  max-width: 1450px;
+  margin: auto;
+  min-width: 400px;
 }
 
 main {
   padding: 0px 100px;
-  min-width: 400px;
 }
 
 p, h1, h2, h3 {
@@ -161,7 +165,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 45px 100px 0px 100px;
+  padding: 45px 100px 0px 100px;
+  margin: 0px;
 }
 header .navbar {
   display: flex;
@@ -179,8 +184,8 @@ footer {
   padding: 66px 20px 29px 20px;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
   margin: 0px;
+  gap: 28px;
 }
 footer .logo {
   width: 122px;
@@ -195,34 +200,34 @@ footer .logo {
   margin: 38px 0px;
 }
 
-.carrouse {
+.carrousel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 415px;
   position: relative;
 }
-.carrouse .carrousel__container {
+.carrousel .carrousel__container {
   width: 100%;
   height: 100%;
 }
-.carrouse .carrousel__container .banner {
+.carrousel .carrousel__container .banner {
   width: 100%;
   height: 100%;
 }
-.carrouse .carrousel__container .banner__darken {
+.carrousel .carrousel__container .banner__darken {
   opacity: 0;
 }
-.carrouse .carrousel__container .banner__active {
+.carrousel .carrousel__container .banner__active {
   height: 100%;
 }
-.carrouse .carrousel__container .banner__passive {
+.carrousel .carrousel__container .banner__passive {
   height: 0%;
 }
-.carrouse .carrousel__container img {
-  width: 100%;
+.carrousel .carrousel__container img {
+  width: 50%;
 }
-.carrouse .carrousel__container .leftArrow {
+.carrousel .carrousel__container .leftArrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,7 +242,7 @@ footer .logo {
   padding: 0;
   font-size: 5.5rem;
 }
-.carrouse .carrousel__container .rightArrow {
+.carrousel .carrousel__container .rightArrow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,7 +257,7 @@ footer .logo {
   padding: 0;
   font-size: 5.5rem;
 }
-.carrouse .carrousel__container .current__counter {
+.carrousel .carrousel__container .current__counter {
   position: absolute;
   z-index: 3;
   bottom: 25px;
@@ -285,17 +290,14 @@ footer .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: flex-end;
 }
 
-.fullStar {
-  color: #ff6060;
+.fullStar, .emptyStar {
+  height: 66%;
 }
 
-.emptyStar {
-  color: #e3e3e3;
-}
-
-.partdeux {
+.housingInfo {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
@@ -311,7 +313,7 @@ footer .logo {
 .rate {
   display: flex;
   margin: 21px 0px 31px 0px;
-  gap: 14px;
+  gap: 10px;
   justify-content: flex-end;
 }
 
@@ -427,6 +429,13 @@ article#gallery {
   position: relative;
   z-index: 3;
 }
+.collapse__title div {
+  width: 32px;
+  aspect-ratio: 1/1;
+}
+.collapse__title div img {
+  width: 100%;
+}
 .collapse__container {
   width: 100%;
 }
@@ -443,6 +452,7 @@ article#gallery {
   margin-top: -5px;
   transition: all 500ms ease-out;
   overflow: hidden;
+  overflow-y: auto;
   box-sizing: border-box;
   z-index: 2;
 }
@@ -456,6 +466,7 @@ article#gallery {
   margin: 24px 0px 24px 0px;
   padding: 0;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .tagList li {
   min-width: 115px;
@@ -476,6 +487,7 @@ article#gallery {
   .banner__txt {
     max-width: 600px;
     margin-left: 40px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -557,15 +569,34 @@ article#gallery {
     padding: 0px 20px;
   }
   header {
-    margin: 20px;
+    padding: 20px;
   }
-  .carrouse .carrousel__container .leftArrow, .carrouse .carrousel__container .rightArrow {
+  .carrousel .carrousel__container .leftArrow, .carrousel .carrousel__container .rightArrow {
     font-size: 1.5rem;
+  }
+  .carrousel .carrousel__container img {
+    width: 25%;
   }
   .containerHousing, .containerHome {
     margin: 27px 0px;
   }
   .containerAbout {
     margin: 19px 0px;
+  }
+  .collapseHousing {
+    flex-direction: column;
+  }
+  .fullStar, .emptyStar {
+    height: 50%;
+  }
+  .rate {
+    gap: 2px;
+    justify-content: start;
+  }
+  .collapse__title div {
+    width: 20px;
+  }
+  .current__counter {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

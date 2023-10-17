@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar} from "@fortawesome/free-solid-svg-icons";
+import fullStar from "../../assets/star-full.png";
+import emptyStar from "../../assets/star-empty.png";
 
 
-library.add(faStar);
+
 
 
 
@@ -19,11 +18,11 @@ function Rate(props) {
         <div className='rate'>
             {possibles.map(function(nthStar){
                 if(rating >= nthStar ){
-                    return(<FontAwesomeIcon icon="star" className='fullStar' key={nthStar} />)
+                    return(<img src={fullStar} className='fullStar' key={nthStar} alt="orange-colored rating star"/>)
                 }
 
                 else{
-                    return(<FontAwesomeIcon icon="star" className='emptyStar' key={nthStar} />)
+                    return(<img src={emptyStar} className='emptyStar' key={nthStar} alt="grey-colored rating star"/>)
                 }
             })}
         </div>
